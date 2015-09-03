@@ -1,0 +1,6 @@
+django
+django-filer
+django-fluent-contents
+django-fluent-pages
+pillow
+south

@@ -1,0 +1,6 @@
+{% load i18n %}
+<p class="file">
+  <a href="{{ instance.file.url }}"{% if instance.target %} target="{{ instance.target }}"{% endif %}>
+    {% if instance.name %}<span class="filename">{{ instance.name }}{% else %}{{ instance.filename }}{% endif %} {% if instance.file %}<span class="filesize">({{ instance.file.size|filesizeformat }})</span>{% else %}({% trans "file missing!" %}){% endif %}{% if instance.name %}</span>{% endif %}
+  </a>
+</p>
