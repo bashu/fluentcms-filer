@@ -7,20 +7,24 @@ import codecs
 
 from setuptools import setup, find_packages
 
-
-When creating the sdist, make sure the django.mo file also exists:
+# When creating the sdist, make sure the django.mo file also exists:
 if 'sdist' in sys.argv or 'develop' in sys.argv:
     os.chdir('fluentcms_filer')
-    try:
-        from django.core.management.commands.compilemessages import Command
-        command = Command()
-        command.execute(stdout=sys.stderr, verbosity=1)
-    except ImportError:
-        # < Django 1.7
-        from django.core.management.commands.compilemessages import compile_messages
-        compile_messages(sys.stderr)
-    finally:
-        os.chdir('..')
+
+    for plugin in ['file', 'picture', 'teaser']:
+        os.chdir(plugin)
+        try:
+            from django.core.management.commands.compilemessages import Command
+            command = Command()
+            command.execute(stdout=sys.stderr, exclude=[], verbosity=1)
+        except ImportError:
+            # < Django 1.7
+            from django.core.management.commands.compilemessages import compile_messages
+            compile_messages(sys.stderr, exclude=[])
+        finally:
+            os.chdir('..')
+
+    os.chdir('..')
 
 
 def read(*parts):
