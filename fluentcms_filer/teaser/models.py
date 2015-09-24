@@ -7,7 +7,8 @@ from django.utils.translation import ugettext_lazy as _
 
 from filer.fields.image import FilerImageField
 
-from fluent_contents.extensions import PluginUrlField
+from fluent_contents.extensions import (
+    PluginHtmlField, PluginUrlField)
 from fluent_contents.models.db import ContentItem
 
 
@@ -19,7 +20,7 @@ class FilerTeaserItem(ContentItem):
     url = PluginUrlField(_("URL"), null=True, blank=True,
         help_text=_("If present image will be clickable."))
 
-    description = models.TextField(_("description"), blank=True, null=True)
+    description = PluginHtmlField(_("description"), blank=True, null=True)
 
     target = models.CharField(_("target"), blank=True, max_length=100, choices=((
         ("", _("same window")),
