@@ -1,6 +1,9 @@
 django
 django-filer
+django-wysiwyg
+django-any-urlfield
 django-fluent-contents
 django-fluent-pages
+django-tinymce
 pillow
 south
