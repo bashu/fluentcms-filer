@@ -1,0 +1,8 @@
+.inline-FilerTeaserItem .form-row .filer-dropzone .dz-message,
+.inline-FilerTeaserItem .form-row .filer-dropzone.filer-dropzone-mobile .dz-message {
+    margin-top: 0;
+    margin: 2em 0;
+}
+.inline-FilerTeaserItem .form-row.url .related-widget-wrapper {
+    overflow: visible;
+}
