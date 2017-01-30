@@ -12,3 +12,10 @@ class FilerTeaserPlugin(ContentPlugin):
     model = FilerTeaserItem
     category = _('Filer')
     render_template = "fluentcms_filer/teaser.html"
+
+    class Media:
+        css = {
+            'screen': (
+                'fluentcms_filer/teaser/admin.css',
+            )
+        }    

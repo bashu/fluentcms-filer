@@ -1,29 +1,29 @@
 import re
 
 from django.conf import settings
-from django.conf.urls import include, patterns, url
-
+from django.conf.urls import include, url
 from django.contrib import admin
-admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^tinymce/', include('tinymce.urls')),                       
-)
+    url(r'^tinymce/', include('tinymce.urls')),
+]
 
 if settings.SERVE_MEDIA:
-    urlpatterns += patterns('django.views.static',
-        url(r'^%s(?P<path>.*)$' % re.escape(settings.STATIC_URL.lstrip('/')), 'serve', kwargs={
+    from django.views.static import serve
+
+    urlpatterns += [
+        url(r'^%s(?P<path>.*)$' % re.escape(settings.STATIC_URL.lstrip('/')), serve, kwargs={
             'document_root': settings.STATIC_ROOT,
         }),
-    )
+    ]
 
-    urlpatterns += patterns('django.views.static',
-        url(r'^%s(?P<path>.*)$' % re.escape(settings.MEDIA_URL.lstrip('/')), 'serve', kwargs={
+    urlpatterns += [
+        url(r'^%s(?P<path>.*)$' % re.escape(settings.MEDIA_URL.lstrip('/')), serve, kwargs={
             'document_root': settings.MEDIA_ROOT,
         }),
-    )
+    ]
 
-urlpatterns += patterns('',
+urlpatterns += [
     url(r'', include('fluent_pages.urls')),
-)
+]
