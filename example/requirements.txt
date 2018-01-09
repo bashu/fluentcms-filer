@@ -1,6 +1,5 @@
 django<2.0
 django-filer
-django-slug-preview
 django-wysiwyg
 django-any-urlfield
 django-fluent-contents
