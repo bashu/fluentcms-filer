@@ -12,6 +12,8 @@ from .models import FilerPictureItem
 class FilerPicturePlugin(ContentPlugin):
     model = FilerPictureItem
     category = _('Filer')
+    admin_form_template = "admin/fluentcms_filer/picture/admin_form.html"
+    admin_init_template = "admin/fluentcms_filer/picture/admin_init.html"
     render_template = "fluentcms_filer/picture.html"
 
     formfield_overrides = {

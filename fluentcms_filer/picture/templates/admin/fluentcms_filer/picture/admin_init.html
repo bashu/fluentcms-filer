@@ -1,0 +1,11 @@
+<script type="text/javascript">
+    (function($) {
+        var func = $.fn.append;
+
+        $.fn.append = function () {
+            return func.apply(this, arguments).trigger('append');
+        };
+
+        $('.cp-content').bind('append', function() { $('.inline-FilerPictureItem').find('.add-row a').trigger('click'); });
+    })(window.jQuery || django.jQuery);
+</script>

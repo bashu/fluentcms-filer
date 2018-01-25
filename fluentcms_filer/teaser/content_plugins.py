@@ -11,6 +11,8 @@ from .models import FilerTeaserItem
 class FilerTeaserPlugin(ContentPlugin):
     model = FilerTeaserItem
     category = _('Filer')
+    admin_form_template = "admin/fluentcms_filer/teaser/admin_form.html"
+    admin_init_template = "admin/fluentcms_filer/teaser/admin_init.html"
     render_template = "fluentcms_filer/teaser.html"
 
     class Media:
