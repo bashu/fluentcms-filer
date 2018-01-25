@@ -11,6 +11,8 @@ from .models import FilerFileItem
 class FilerFilePlugin(ContentPlugin):
     model = FilerFileItem
     category = _('Filer')
+    admin_form_template = "admin/fluentcms_filer/file/admin_form.html"
+    admin_init_template = "admin/fluentcms_filer/file/admin_init.html"
     render_template = "fluentcms_filer/file.html"
 
     class Media:
