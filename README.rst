@@ -6,11 +6,11 @@ django-filer_ content plugins for django-fluent-contents_
 .. image:: https://img.shields.io/pypi/v/fluentcms-filer.svg
     :target: https://pypi.python.org/pypi/fluentcms-filer/
 
-.. image:: https://img.shields.io/github/license/bashu/fluentcms-filer.svg
+.. image:: https://img.shields.io/pypi/dm/fluentcms-filer.svg
     :target: https://pypi.python.org/pypi/fluentcms-filer/
 
-.. image:: https://landscape.io/github/bashu/fluentcms-filer/develop/landscape.svg?style=flat
-    :target: https://landscape.io/github/bashu/fluentcms-filer/develop
+.. image:: https://img.shields.io/github/license/bashu/fluentcms-filer.svg
+    :target: https://pypi.python.org/pypi/fluentcms-filer/
 
 Installation
 ============
