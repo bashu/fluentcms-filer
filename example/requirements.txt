@@ -1,10 +1,10 @@
-django<2.0
+django>2.0
 django-filer
 django-wysiwyg
 django-any-urlfield
-django-fluent-contents
-django-fluent-pages
+django-fluent-contents>2.0
+django-fluent-pages>2.0
 django-tinymce
-pillow
+pillow>4.0
 south
 

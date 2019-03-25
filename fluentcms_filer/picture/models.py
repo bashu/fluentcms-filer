@@ -23,7 +23,7 @@ class FilerPictureItem(ContentItem):
         (ALIGN_RIGHT, _("Right")),
     )
 
-    image = FilerImageField(verbose_name=_("image"))
+    image = FilerImageField(verbose_name=_("image"), on_delete=models.CASCADE)
     caption = models.TextField(_("caption"), blank=True)
     align = models.CharField(_("align"), max_length=10, choices=ALIGN_CHOICES, blank=True)
 

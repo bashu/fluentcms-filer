@@ -14,7 +14,7 @@ from fluent_contents.models.db import ContentItem
 @python_2_unicode_compatible
 class FilerFileItem(ContentItem):
 
-    file = FilerFileField(verbose_name=_("file"))
+    file = FilerFileField(verbose_name=_("file"), on_delete=models.CASCADE)
     name = models.CharField(_("name"), max_length=255, null=True, blank=True)
 
     target = models.CharField(_("target"), blank=True, max_length=100, choices=((
