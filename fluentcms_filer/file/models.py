@@ -1,17 +1,11 @@
-# -*- coding: utf-8 -*-
-
-from future.builtins import str
-from future.utils import python_2_unicode_compatible
-
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from filer.fields.file import FilerFileField
 
 from fluent_contents.models.db import ContentItem
 
 
-@python_2_unicode_compatible
 class FilerFileItem(ContentItem):
 
     file = FilerFileField(verbose_name=_("file"), on_delete=models.CASCADE)
