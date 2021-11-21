@@ -12,5 +12,20 @@ class FilerTeaserPlugin(ContentPlugin):
     admin_init_template = "admin/fluentcms_filer/teaser/admin_init.html"
     render_template = "fluentcms_filer/teaser.html"
 
+    fieldsets = (
+        (
+            None,
+            {
+                "fields": ("title", "image", "description"),
+            },
+        ),
+        (
+            _("read more link"),
+            {
+                "fields": ("url", "url_title", "target"),
+            },
+        ),
+    )
+
     class Media:
         css = {"screen": ("fluentcms_filer/teaser/admin.css",)}

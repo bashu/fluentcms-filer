@@ -9,7 +9,7 @@
     {% endif %}
     {% if instance.description %}<div class="description">{{ instance.description }}</div>{% endif %}
     {% if instance.url %}
-      <a href="{{ instance.url }}"{% if target %} target="{{ target }}"{% endif %}>{% trans "more" %} &#187;</a>
+      <a href="{{ instance.url }}" class="readmore"{% if target %} target="{{ target }}"{% endif %}>{% if instance.url_title %}{{ instance.url_title }}{% else %}{% trans "more" %} &#187;{% endif %}</a>
     {% endif %}
   </div>
 {% endwith %}

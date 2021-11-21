@@ -10,6 +10,7 @@ class FilerTeaserItem(ContentItem):
     title = models.CharField(_("title"), max_length=256)
     image = FilerImageField(verbose_name=_("image"), blank=True, null=True, on_delete=models.SET_NULL)
     url = PluginUrlField(_("URL"), null=True, blank=True, help_text=_("If present image will be clickable."))
+    url_title = models.CharField(_("URL title"), max_length=200, blank=True, null=True)
 
     description = PluginHtmlField(_("description"), blank=True, null=True)
 
