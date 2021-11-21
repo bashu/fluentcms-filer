@@ -1,6 +1,5 @@
-from django.utils.translation import gettext_lazy as _
 from django.contrib.admin.widgets import AdminTextareaWidget
-
+from django.utils.translation import gettext_lazy as _
 from fluent_contents.extensions import ContentPlugin, plugin_pool
 
 from .models import FilerPictureItem
@@ -9,23 +8,17 @@ from .models import FilerPictureItem
 @plugin_pool.register
 class FilerPicturePlugin(ContentPlugin):
     model = FilerPictureItem
-    category = _('Filer')
+    category = _("Filer")
     admin_form_template = "admin/fluentcms_filer/picture/admin_form.html"
     admin_init_template = "admin/fluentcms_filer/picture/admin_init.html"
     render_template = "fluentcms_filer/picture.html"
 
     formfield_overrides = {
-        'caption': {
-            'widget': AdminTextareaWidget(attrs={'cols': 30, 'rows': 4, 'class': 'vTextField'}),
+        "caption": {
+            "widget": AdminTextareaWidget(attrs={"cols": 30, "rows": 4, "class": "vTextField"}),
         },
     }
-    radio_fields = {
-        'align': ContentPlugin.HORIZONTAL
-    }
+    radio_fields = {"align": ContentPlugin.HORIZONTAL}
 
     class Media:
-        css = {
-            'screen': (
-                'fluentcms_filer/picture/admin.css',
-            )
-        }    
+        css = {"screen": ("fluentcms_filer/picture/admin.css",)}

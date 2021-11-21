@@ -1,16 +1,14 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-
 from filer.fields.image import FilerImageField
-
 from fluent_contents.extensions import PluginUrlField
 from fluent_contents.models.db import ContentItem
 
 
 class FilerPictureItem(ContentItem):
-    ALIGN_LEFT = 'left'
-    ALIGN_CENTER = 'center'
-    ALIGN_RIGHT = 'right'
+    ALIGN_LEFT = "left"
+    ALIGN_CENTER = "center"
+    ALIGN_RIGHT = "right"
     ALIGN_CHOICES = (
         (ALIGN_LEFT, _("Left")),
         (ALIGN_CENTER, _("Center")),
@@ -34,10 +32,10 @@ class FilerPictureItem(ContentItem):
     @property
     def align_class(self):
         if self.align == self.ALIGN_LEFT:
-            return 'align-left'
+            return "align-left"
         elif self.align == self.ALIGN_CENTER:
-            return 'align-center'
+            return "align-center"
         elif self.align == self.ALIGN_RIGHT:
-            return 'align-right'
+            return "align-right"
         else:
-            return ''
+            return ""
