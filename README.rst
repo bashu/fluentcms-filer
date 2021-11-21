@@ -10,6 +10,9 @@ fluentcms-filer
 .. image:: https://img.shields.io/github/license/bashu/fluentcms-filer.svg
     :target: https://pypi.python.org/pypi/fluentcms-filer/
 
+.. image:: https://app.travis-ci.com/bashu/fluentcms-filer.svg?branch=develop
+    :target: https://app.travis-ci.com/bashu/fluentcms-filer/
+
 django-filer_ content plugins for django-fluent-contents_
 
 Installation

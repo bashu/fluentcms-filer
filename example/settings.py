@@ -140,6 +140,4 @@ STATIC_URL = "/static/"
 
 FLUENT_PAGES_TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), "templates", "layouts")
 
-FLUENTCMS_TEASER_UPLOAD_TO = "teasers/"
-
 DJANGO_WYSIWYG_FLAVOR = "tinymce"
