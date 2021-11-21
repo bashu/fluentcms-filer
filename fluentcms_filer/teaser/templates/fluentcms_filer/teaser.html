@@ -7,7 +7,7 @@
         <img src="{{ instance.image.url }}" alt="{{ instance.title }}"/>
       {% if instance.url %}</a>{% endif %}
     {% endif %}
-    {% if instance.description %}<p>{{ instance.description }}</p>{% endif %}
+    {% if instance.description %}<div class="description">{{ instance.description }}</div>{% endif %}
     {% if instance.url %}
       <a href="{{ instance.url }}"{% if target %} target="{{ target }}"{% endif %}>{% trans "more" %} &#187;</a>
     {% endif %}
