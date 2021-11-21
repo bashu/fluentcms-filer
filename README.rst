@@ -1,8 +1,6 @@
 fluentcms-filer
 ===============
 
-django-filer_ content plugins for django-fluent-contents_
-
 .. image:: https://img.shields.io/pypi/v/fluentcms-filer.svg
     :target: https://pypi.python.org/pypi/fluentcms-filer/
 
@@ -12,8 +10,13 @@ django-filer_ content plugins for django-fluent-contents_
 .. image:: https://img.shields.io/github/license/bashu/fluentcms-filer.svg
     :target: https://pypi.python.org/pypi/fluentcms-filer/
 
+.. image:: https://app.travis-ci.com/bashu/fluentcms-filer.svg?branch=develop
+    :target: https://app.travis-ci.com/bashu/fluentcms-filer/
+
+django-filer_ content plugins for django-fluent-contents_
+
 Installation
-============
+------------
 
 First install the module, preferably in a virtual environment. It can be installed from PyPI:
 
@@ -23,7 +26,7 @@ First install the module, preferably in a virtual environment. It can be install
 
 
 Backend Configuration
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 First make sure the project is configured for both django-fluent-contents_ and django-filer_.
 
@@ -46,7 +49,7 @@ The database tables can be created afterwards:
 Now, the ``FilerFilePlugin``, ``FilerPicturePlugin`` and ``FilerTeaserPlugin`` can be added to your ``PlaceholderField`` and ``PlaceholderEditorAdmin`` admin screens.
 
 Frontend Configuration
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 If needed, the HTML code can be overwritten by redefining ``fluentcms_filer/[file|picture|teaser].html``.
 
